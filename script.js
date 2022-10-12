@@ -50,5 +50,12 @@ async function getPhotos() {
 }
 
 
+// Check for the scroll near botttom
+window.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scroll >= document.body.offsetHeight - 1000) {
+        getPhotos();
+    }
+})
+
 // OnLoad
 getPhotos();
